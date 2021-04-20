@@ -1,2 +1,2 @@
 # tasks
-sample tasks app
+Sample Tasks app
