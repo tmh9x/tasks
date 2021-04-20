@@ -1,2 +1,2 @@
-# to-do
-sample to-do app
+# tasks
+sample tasks app
