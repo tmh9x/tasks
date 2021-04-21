@@ -9,37 +9,37 @@
   </head>
   <body>
     <form action="" class="form">
-      <h2>Add new</h2>
-      <input type="text" placeholder="Enter Task" class="textInput" />
-      <h3>When</h3>
+      <h2 class="formTitle">Add new</h2>
+      <input type="text" placeholder="Enter Task" class="formInput" />
+
+      <h3 class="formSubtitle">When</h3>
+
       <section class="radioContainer">
         <label>
           <input
+            class="radioContainer__input"
             type="radio"
             name="date"
             value="today"
-            class="radioContainer__input"
           />
-          <span>Today</span>
+          <span class="radioContainerTitle">Today</span>
         </label>
-
         <label>
           <input
+            class="radioContainer__input"
             type="radio"
             name="date"
             value="tomorrow"
-            class="radioContainer__input"
           />
-          <span>Tomorrow</span>
+          <span class="radioContainerTitle">Tomorrow</span>
         </label>
-
         <label>
           <input
+            class="radioContainer__input"
             type="radio"
             name="date"
             value="selectDate"
-            class="radioContainer__input"
-          /><span>Select Date</span>
+          /><span class="radioContainerTitle">Select Date</span>
         </label>
       </section>
       <input type="submit" value="Add Task" class="formSubmit" />
