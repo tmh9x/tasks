@@ -84,3 +84,19 @@ h3 {
 .radioContainer__input:checked + span {
   color: var(--primary-color);
 }
+
+.button {
+  border: none;
+  background-color: var(--secondary-text-color);
+}
+
+.radioContainerDashboard {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  /* transform-origin: 0 0; */
+}
+
+.bodyDashboard {
+  display: grid;
+}
