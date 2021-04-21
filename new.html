@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Tasks</title>
+  </head>
+  <body>
+    <form action="" class="form">
+      <h2>Add new</h2>
+      <input type="text" placeholder="Enter Task" class="textInput" />
+      <h3>When</h3>
+      <section class="radioContainer">
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="today"
+            class="radioContainer__input"
+          />
+          <span>Today</span>
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="tomorrow"
+            class="radioContainer__input"
+          />
+          <span>Tomorrow</span>
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="selectDate"
+            class="radioContainer__input"
+          /><span>Select Date</span>
+        </label>
+      </section>
+      <input type="submit" value="Add Task" class="formSubmit" />
+    </form>
+  </body>
+</html>

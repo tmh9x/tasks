@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap");
 
 :root {
-  --primary-bg-color: #fe4775;
-  --secondary-bg-color: #161060;
+  --primary-color: #fe4775;
+  --secondary-color: #161060;
   --primary-text-color: #111111;
   --secondary-text-color: #ffffff;
   --headline-color: #393939;
@@ -19,4 +19,68 @@
 
 html {
   font-size: 16px;
+}
+
+* {
+  font-family: var(--primary-font-family);
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.form {
+  display: grid;
+  align-content: center;
+  position: relative;
+  row-gap: 5em;
+  padding: 1.5em 0 6.2em 1.5em;
+  height: 100%;
+  display: grid;
+}
+
+.textInput {
+  width: 100%;
+  font-size: 3em;
+  border: none;
+  border-bottom: solid 2px grey;
+  padding-right: 0.5em;
+}
+
+h2 {
+  font-size: 3em;
+  text-transform: lighter;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.radioContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 2.5em 0;
+  background-color: rgba(212, 212, 212), 0.1;
+}
+
+.formSubmit {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: none;
+  color: var(--secondary-text-color);
+  background-color: var(--primary-color);
+  font-size: 1.4em;
+  padding: 1.3em 2em;
+}
+
+.radioContainer__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radioContainer__input:checked + span {
+  color: var(--primary-color);
 }
