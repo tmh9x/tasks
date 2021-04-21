@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap");
 
 :root {
   --primary-bg-color: #fe4775;
@@ -20,3 +20,33 @@
 html {
   font-size: 16px;
 }
+
+* {
+  font-family: var(--primary-font-family);
+  margin: 0;
+}
+
+form {
+  display: grid;
+  grid-row: 5fr;
+}
+
+.textInput {
+  border: none;
+  border-bottom: solid 2px grey;
+}
+
+h2 {
+  margin: 3em 0;
+  font-size: 3em;
+}
+
+.submitButton {
+  color: var(--secondary-text-color);
+  border: none;
+  background-color: var(--primary-bg-color);
+}
+
+/* inut[type="radio"] {
+
+} */
