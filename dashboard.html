@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <button><img src="/images/menu.svg" alt="" /></button>
+    <section>
+      <h2>Tasks</h2>
+      <button><img src="/images/notif.svg" alt="" /></button>
+    </section>
+
+    <section class="radioContainer">
+      <label>
+        <input
+          type="radio"
+          name="date"
+          value="thisweek"
+          class="radioContainer__input"
+        />
+        <span>This week</span>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="date"
+          value="tomorrow"
+          class="radioContainer__input"
+        />
+        <span>Tomorrow</span>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="date"
+          value="today"
+          class="radioContainer__input"
+        />
+        <span>Today</span>
+      </label>
+    </section>
+  </body>
+</html>
