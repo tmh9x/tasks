@@ -8,56 +8,65 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <button class="button"><img src="/images/menu.svg" alt="" /></button>
-    <section class="formTitleBar">
-      <h2 class="formTitle">Tasks</h2>
-      <button class="button"><img src="/images/notif.svg" alt="" /></button>
-    </section>
-    <section class="radioContainerDashboard">
-      <label>
-        <input
-          type="radio"
-          name="date"
-          value="thisweek"
-          class="radioContainer__input"
-        />
-        <span>This week</span>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="date"
-          value="tomorrow"
-          class="radioContainer__input"
-        />
-        <span>Tomorrow</span>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="date"
-          value="today"
-          class="radioContainer__input"
-        />
-        <span>Today</span>
-      </label>
-    </section>
+    <main class="layout">
+      <button class="layout__burgerMenu">
+        <img src="/images/menu.svg" alt="" />
+      </button>
 
-    <section class="checkboxContainer">
-      <label
-        ><input class="checkboxContainer__input" type="checkbox" />Book
-        appointment with</label
-      >
-      <label
-        ><input class="checkboxContainer__input" type="checkbox" />Book
-        appointment with</label
-      >
-      <label
-        ><input class="checkboxContainer__input" type="checkbox" />Book
-        appointment</label
-      >
-    </section>
+      <h2 class="layout__header">Tasks</h2>
+      <button class="layout__notifications">
+        <img src="/images/notif.svg" alt="" />
+      </button>
 
-    <a href=""><img src="images/plus.svg" alt="" /></a>
+      <section class="radioContainerDashboard">
+        <label>
+          <input type="radio" name="date" class="radioContainer__input" />
+          <span class="radioContainerTitle">Today</span>
+        </label>
+        <label>
+          <input type="radio" name="date" class="radioContainer__input" />
+          <span class="radioContainerTitle">Tomorrow</span>
+        </label>
+        <label>
+          <input type="radio" name="date" class="radioContainer__input" />
+          <span class="radioContainerTitle">This Week</span>
+        </label>
+      </section>
+
+      <section class="checkboxContainer">
+        <label
+          ><input type="checkbox" class="checkboxContainer__input" checked />
+          <span class="checkboxContainer__task">Book appointment with</span>
+        </label>
+        <label
+          ><input type="checkbox" class="checkboxContainer__input" />
+          <span class="checkboxContainer__task"
+            >Upload today shot on Dribbble</span
+          >
+        </label>
+        <label
+          ><input type="checkbox" class="checkboxContainer__input" />
+          <span class="checkboxContainer__task"
+            >Complete the Elephant Illustration</span
+          >
+        </label>
+        <label
+          ><input type="checkbox" class="checkboxContainer__input" />
+          <span class="checkboxContainer__task"
+            >Buy Cake for Clair's birthday</span
+          >
+        </label>
+        <label
+          ><input type="checkbox" class="checkboxContainer__input" />
+          <span class="checkboxContainer__task"
+            >Attend UX Conference with Jared</span
+          >
+        </label>
+      </section>
+
+      <a class="layout__newTask" href="./new.html"
+        ><img src="images/plus.svg" alt=""
+      /></a>
+    </main>
   </body>
 </html>
