@@ -1,68 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap");
 
-:root {
-  --primary-color: #fe4775;
-  --secondary-color: #161060;
-  --primary-text-color: #111111;
-  --secondary-text-color: #ffffff;
-  --headline-color: #393939;
-
-  --primary-font-family: "Montserrat", sans-serif;
-  --secondary-font-family: "Roboto", sans-serif;
-}
-
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #fe4775;
+  --secondary-color: #161060;
+  --primary-text-color: #111111;
+  --secondary-text-color: #ffffff;
+  --headline-color: #393939;
+  --inactive-text-color: #3939399d;
+
+  --primary-font-family: "Montserrat", sans-serif;
+  --secondary-font-family: "Roboto", sans-serif;
+}
+
 html {
   font-size: 16px;
 }
 
-* {
+body {
   font-family: var(--primary-font-family);
+  height: 100vh;
   margin: 0;
 }
 
-body {
-  height: 100vh;
-}
-
 .form {
-  display: grid;
-  align-content: center;
   position: relative;
-  row-gap: 5em;
-  padding: 1.5em 0 6.2em 1.5em;
   height: 100%;
   display: grid;
+  align-content: center;
+  row-gap: 5em;
+  padding: 1.5em 0 6.2em 1.5em;
 }
 
-.textInput {
-  width: 100%;
+.formTitle {
+  font-size: 3em;
+  text-transform: normal;
+}
+
+.formSubtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.formInput {
   font-size: 3em;
   border: none;
   border-bottom: solid 2px grey;
+  width: 100%;
   padding-right: 0.5em;
 }
 
-h2 {
-  font-size: 3em;
-  text-transform: lighter;
-}
-
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+.formInput::placeholder {
+  opacity: 04;
 }
 
 .radioContainer {
   display: flex;
   justify-content: space-around;
-  padding: 2.5em 0;
-  background-color: rgba(212, 212, 212), 0.1;
+  margin-right: 1.5em;
+  background-color: rgba(212, 212, 212, 0.1);
 }
 
 .formSubmit {
@@ -81,6 +82,97 @@ h3 {
   opacity: 0;
 }
 
-.radioContainer__input:checked + span {
+.radioContainerTitle {
+  color: var(--inactive-text-color);
+}
+
+.radioContainer__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radioContainer__input:checked + .radioContainerTitle {
   color: var(--primary-color);
+}
+
+.radioContainer__input:focus-visible + .radioContainerTitle {
+  outline: thin solid;
+}
+
+/*/////////////////////////
+LAYOUT DASHBOARD
+/////////////////////////*/
+
+.layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.layout__burgerMenu {
+  grid-column: 1 / 4;
+  justify-self: start;
+  margin: 3em;
+  margin-left: 1em;
+  border: none;
+  background: none;
+}
+
+.layout__header {
+  grid-column: 1 / 3;
+  font-size: 3em;
+  margin: 0;
+  margin-left: 0.3em;
+}
+
+.layout__notifications {
+  margin-right: 1em;
+  justify-self: end;
+  border: none;
+  background: none;
+}
+
+.layout__newTask {
+  display: grid;
+  place-items: center;
+  grid-column: 3 / 4;
+  padding: 2em 3em;
+  background-color: var(--primary-color);
+  padding: 2em 3em;
+  border-top-left-radius: 0.5em;
+}
+
+.radioContainerDashboard {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / 2;
+  grid-row: span 2;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  padding: 4em 2em;
+  letter-spacing: 0.1em;
+  align-items: center;
+}
+
+.checkboxContainer {
+  display: grid;
+  grid-column: 2 / 4;
+  padding: 3em 1em;
+  font-size: 1.3em;
+  align-content: start;
+  row-gap: 3em;
+  overflow: auto;
+  height: 1fr;
+}
+
+.checkboxContainer__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkboxContainer__input:checked + .checkboxContainer__task {
+  text-decoration: line-through;
+  text-decoration-color: var(--primary-color);
 }
