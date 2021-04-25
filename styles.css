@@ -11,6 +11,7 @@
   --secondary-color: #161060;
   --primary-text-color: #111111;
   --secondary-text-color: #ffffff;
+  --primary-bg-color: #ffffff;
   --headline-color: #393939;
   --inactive-text-color: #3939399d;
 
@@ -72,7 +73,7 @@ body {
   width: 100%;
   border: none;
   color: var(--secondary-text-color);
-  background-color: var(--primary-color);
+  background-color: var(--primary-bg-color);
   font-size: 1.4em;
   padding: 1.3em 2em;
 }
@@ -110,7 +111,7 @@ LAYOUT DASHBOARD
   grid-template-rows: auto auto 1fr auto;
 }
 
-.layout__burgerMenu {
+.burgerMenu {
   grid-column: 1 / 4;
   justify-self: start;
   margin: 3em;
@@ -181,60 +182,91 @@ LAYOUT DASHBOARD
 MENU PAGE
 ///////////////*/
 
-.menu {
-  background-color: var(--secondary-color);
+.modalContainer {
+  width: 100%;
   height: 100%;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 500ms ease;
+}
+
+.modalContainer:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalContainer > div {
+  transform: translate(0px, -100%);
+  transition: all 500ms ease;
+}
+
+.modalContainer:target > div {
+  transform: translate(0px, 0px);
+}
+
+.modal {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background: var(--secondary-color);
+  padding: 20px;
   display: grid;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template: auto 1fr 1fr;
 }
 
-.menu-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 4em 2em;
+.modalHeader {
+  margin-top: 2.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.menu-title {
+.modalHeading {
+  letter-spacing: 0.1em;
   margin: 0;
   color: var(--secondary-text-color);
   text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  font-family: var(--secondary-font-family);
+  padding: 0;
 }
 
-.menu-close-button {
+.closeMenu {
   background: transparent;
   border: none;
-  padding: 0;
-  margin: 0;
+  justify-self: end;
 }
 
-.menu-list {
-  font-family: var(--primary-font-family);
-  margin-left: 2em;
+.lineFirst {
+  position: absolute;
 }
 
-.menu-list a {
-  text-decoration: none;
-  color: var(--secondary-text-color);
-}
-
-.menu-list ul {
-  list-style: none;
-}
-
-.menu-list__nav {
+.modalMenuNav {
+  margin-top: 0;
+  margin-bottom: 0;
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 1em;
   font-size: 2em;
   letter-spacing: 0.1em;
   padding: 0;
 }
 
-.menu-list__meta {
+.modalMenuNav li,
+.modalMenuLinks li {
+  list-style: none;
+}
+
+.modalMenuLinks {
+  margin-top: 0;
   display: grid;
   gap: 2em;
   padding: 0;
+}
+
+.modalMenuNav a,
+.modalMenuLinks a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
 }
