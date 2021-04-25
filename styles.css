@@ -176,3 +176,65 @@ LAYOUT DASHBOARD
   text-decoration: line-through;
   text-decoration-color: var(--primary-color);
 }
+
+/*///////////////
+MENU PAGE
+///////////////*/
+
+.menu {
+  background-color: var(--secondary-color);
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+}
+
+.menu-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4em 2em;
+}
+
+.menu-title {
+  margin: 0;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  font-family: var(--secondary-font-family);
+}
+
+.menu-close-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list {
+  font-family: var(--primary-font-family);
+  margin-left: 2em;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
+.menu-list ul {
+  list-style: none;
+}
+
+.menu-list__nav {
+  display: grid;
+  gap: 1em;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  padding: 0;
+}
+
+.menu-list__meta {
+  display: grid;
+  gap: 2em;
+  padding: 0;
+}
