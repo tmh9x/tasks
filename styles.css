@@ -196,17 +196,9 @@ MENU PAGE
   pointer-events: auto;
 }
 
-.modalContainer > div {
+.modalContainer {
   transform: translate(0px, -100%);
   transition: all 500ms ease;
-}
-
-.modalContainer:target > div {
-  transform: translate(0px, 0px);
-}
-
-.modal {
-  margin: auto;
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -215,7 +207,12 @@ MENU PAGE
   background: var(--secondary-color);
   padding: 20px;
   display: grid;
-  grid-template: auto 1fr 1fr;
+  grid-template: 1fr auto auto;
+}
+
+.modalContainer:target {
+  transform: translate(0px, 0px);
+  margin: auto;
 }
 
 .modalHeader {
@@ -245,10 +242,6 @@ MENU PAGE
 .modalMenuNav {
   margin-top: 0;
   margin-bottom: 0;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 1em;
-  font-size: 2em;
   letter-spacing: 0.1em;
   padding: 0;
 }
@@ -256,12 +249,19 @@ MENU PAGE
 .modalMenuNav li,
 .modalMenuLinks li {
   list-style: none;
+  padding-bottom: 1em;
+}
+
+.modalMenuNav li {
+  font-size: 2em;
+}
+
+.modalMenuLinks li {
+  padding-bottom: 3em;
 }
 
 .modalMenuLinks {
   margin-top: 0;
-  display: grid;
-  gap: 2em;
   padding: 0;
 }
 
