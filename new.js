@@ -8,5 +8,15 @@ formElement.onsubmit = function (event) {
     ".radioContainer__input:checked"
   );
 
+  if (!textInputElement.value) {
+    alert("Please enter a task");
+    return;
+  }
+
+  if (!checkedDateInput) {
+    alert("Please select a date");
+    return;
+  }
+
   console.log(textInputElement.value, checkedDateInput.value);
 };
