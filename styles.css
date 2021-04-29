@@ -7,11 +7,10 @@
 }
 
 :root {
-  --primary-color: #fe4775;
-  --secondary-color: #161060;
+  --primary-bg-color: #fe4775;
+  --secondary-bg-color: #161060;
   --primary-text-color: #111111;
   --secondary-text-color: #ffffff;
-  --primary-bg-color: #ffffff;
   --headline-color: #393939;
   --inactive-text-color: #3939399d;
 
@@ -93,7 +92,7 @@ body {
 }
 
 .radioContainer__input:checked + .radioContainerTitle {
-  color: var(--primary-color);
+  color: var(--primary-bg-color);
 }
 
 .radioContainer__input:focus-visible + .radioContainerTitle {
@@ -139,7 +138,7 @@ LAYOUT DASHBOARD
   place-items: center;
   grid-column: 3 / 4;
   padding: 2em 3em;
-  background-color: var(--primary-color);
+  background-color: var(--primary-bg-color);
   padding: 2em 3em;
   border-top-left-radius: 0.5em;
 }
@@ -175,7 +174,7 @@ LAYOUT DASHBOARD
 
 .checkboxContainer__input:checked + .checkboxContainer__task {
   text-decoration: line-through;
-  text-decoration-color: var(--primary-color);
+  text-decoration-color: var(--primary-bg-color);
 }
 
 /*///////////////
