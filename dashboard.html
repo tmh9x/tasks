@@ -22,7 +22,13 @@
 
       <section class="radioContainerDashboard">
         <label>
-          <input type="radio" name="date" class="radioContainer__input" />
+          <input
+            type="radio"
+            name="date"
+            class="radioContainer__input"
+            value="today"
+            checked
+          />
           <span class="radioContainerTitle">Today</span>
         </label>
         <label>
@@ -36,7 +42,7 @@
       </section>
 
       <section class="checkboxContainer">
-        <label
+        <!-- <label
           ><input type="checkbox" class="checkboxContainer__input" checked />
           <span class="checkboxContainer__task">Book appointment with</span>
         </label>
@@ -63,7 +69,7 @@
           <span class="checkboxContainer__task"
             >Attend UX Conference with Jared</span
           >
-        </label>
+        </label> -->
       </section>
 
       <a class="layout__newTask" href="./new.html"
@@ -110,6 +116,7 @@
           </li>
         </ul>
       </section>
+      <script src="/dashboard.js"></script>
     </main>
   </body>
 </html>
